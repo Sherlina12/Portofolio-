@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Sherlina Yuliarefa</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #020617;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .neon {
+            color: #38bdf8;
+            text-shadow: 0 0 15px rgba(56,189,248,0.6);
+        }
+
+        .card {
+            transition: all 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: #38bdf8;
+            box-shadow: 0 0 25px rgba(56,189,248,0.15);
+        }
+
+        .glow {
+            box-shadow: 0 0 30px rgba(56,189,248,0.25);
+        }
+
+        .typing {
+            border-right: 3px solid #38bdf8;
+            padding-right: 4px;
+        }
+
+        .skill-bar {
+            height: 10px;
+            background: #1e293b;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .skill-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #0284c7, #38bdf8);
+            border-radius: 20px;
+        }
+
+        .fade {
+            animation: fadeIn 1.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="sticky top-0 z-50 bg-slate-950/90 backdrop-blur border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+
+        <h1 class="font-bold text-xl neon">
+            Sherlina<span class="text-white">.</span>
+        </h1>
+
+        <div class="hidden md:flex gap-6 text-sm">
+            <a href="#home" class="hover:text-sky-400 transition">Home</a>
+            <a href="#about" class="hover:text-sky-400 transition">About</a>
+            <a href="#skills" class="hover:text-sky-400 transition">Skills</a>
+            <a href="#projects" class="hover:text-sky-400 transition">Projects</a>
+            <a href="#contact" class="hover:text-sky-400 transition">Contact</a>
+        </div>
+
+        <a href="#contact"
+        class="bg-sky-500 hover:bg-sky-600 px-4 py-2 rounded-lg text-sm transition">
+            Contact
+        </a>
+
+    </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="min-h-screen flex items-center px-6 py-20">
+
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+        <div class="fade">
+
+            <p class="text-sky-400 uppercase tracking-widest text-sm">
+                Selamat Datang di Portofolio Saya
+            </p>
+
+            <h2 class="text-4xl md:text-6xl font-bold mt-5 leading-tight">
+                Halo, Saya <br>
+                <span class="neon">Sherlina Yuliarefa</span>
+            </h2>
+
+            <h3 class="text-2xl mt-6 text-slate-300">
+                Saya seorang <span id="typing" class="typing neon"></span>
+            </h3>
+
+            <p class="text-slate-400 mt-6 leading-relaxed">
+                Saya adalah siswa kelas X RPL yang sedang mempelajari
+                dasar pemrograman web, logika algoritma, dan
+                pembuatan aplikasi digital.
+            </p>
+
+            <div class="flex flex-wrap gap-4 mt-8">
+
+                <a href="#projects"
+                class="bg-sky-500 hover:bg-sky-600 px-6 py-3 rounded-xl font-semibold transition">
+                    <i class="fa-solid fa-code mr-2"></i>
+                    Lihat Project
+                </a>
+
+                <a href="#about"
+                class="border border-sky-400 px-6 py-3 rounded-xl hover:bg-sky-400/10 transition">
+                    Tentang Saya
+                </a>
+
+            </div>
+
+            <div class="flex gap-6 mt-8 text-2xl">
+
+                <a href="https://www.instagram.com/sherlina5551"
+                target="_blank"
+                class="hover:text-sky-400 transition">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://github.com/Sherlina12"
+                target="_blank"
+                class="hover:text-sky-400 transition">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+
+                <a href="mailto:sherlina55r@gmail.com"
+                class="hover:text-sky-400 transition">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- AVATAR -->
+        <div class="flex justify-center">
+
+            <div class="glow border-4 border-sky-400 rounded-full p-3">
+
+                <img
+                src="https://api.dicebear.com/9.x/adventurer/svg?seed=Sherlina"
+                alt="Avatar Sherlina"
+                class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-slate-800">
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-24 px-6 bg-slate-900">
+
+    <div class="max-w-6xl mx-auto">
+
+        <div class="text-center mb-14">
+
+            <p class="text-sky-400 tracking-widest uppercase text-sm">
+                Tentang Saya
+            </p>
+
+            <h2 class="text-4xl font-bold mt-3">
+                About <span class="neon">Me</span>
+            </h2>
+
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-10">
+
+            <div class="card border border-slate-700 bg-slate-800 p-8 rounded-2xl">
+
+                <h3 class="text-2xl font-bold mb-5">
+                    <i class="fa-solid fa-user text-sky-400 mr-2"></i>
+                    Profil
+                </h3>
+
+                <p class="text-slate-400 leading-relaxed">
+                    Nama saya Sherlina Yuliarefa. Saya merupakan
+                    siswa kelas X RPL di SMK Ma'arif Batu.
+
+                    Saya tertarik dengan dunia teknologi, pemrograman,
+                    desain UI, dan pengembangan game. Saya terus
+                    belajar untuk mengembangkan kemampuan serta
+                    membuat berbagai project kreatif.
+                </p>
+
+            </div>
+
+            <div class="grid grid-cols-2 gap-5">
+
+                <div class="card border border-slate-700 bg-slate-800 p-6 rounded-2xl text-center">
+                    <i class="fa-solid fa-graduation-cap text-sky-400 text-3xl"></i>
+                    <h3 class="font-bold mt-3">Pendidikan</h3>
+                    <p class="text-slate-400 text-sm mt-2">
+                        SMK Ma'arif Batu
+                    </p>
+                </div>
+
+                <div class="card border border-slate-700 bg-slate-800 p-6 rounded-2xl text-center">
+                    <i class="fa-solid fa-laptop-code text-sky-400 text-3xl"></i>
+                    <h3 class="font-bold mt-3">Jurusan</h3>
+                    <p class="text-slate-400 text-sm mt-2">
+                        X RPL
+                    </p>
+                </div>
+
+                <div class="card border border-slate-700 bg-slate-800 p-6 rounded-2xl text-center">
+                    <i class="fa-solid fa-gamepad text-sky-400 text-3xl"></i>
+                    <h3 class="font-bold mt-3">Minat</h3>
+                    <p class="text-slate-400 text-sm mt-2">
+                        Game Developer
+                    </p>
+                </div>
+
+                <div class="card border border-slate-700 bg-slate-800 p-6 rounded-2xl text-center">
+                    <i class="fa-solid fa-lightbulb text-sky-400 text-3xl"></i>
+                    <h3 class="font-bold mt-3">Kreativitas</h3>
+                    <p class="text-slate-400 text-sm mt-2">
+                        Belajar & Berkarya
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="py-24 px-6">
+
+    <div class="max-w-6xl mx-auto">
+
+        <div class="text-center mb-14">
+
+            <p class="text-sky-400 uppercase tracking-widest text-sm">
+                Kemampuan
+            </p>
+
+            <h2 class="text-4xl font-bold mt-3">
+                My <span class="neon">Skills</span>
+            </h2>
+
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+
+            <!-- HTML -->
+            <div class="card bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+
+                <div class="flex justify-between mb-4">
+                    <span>
+                        <i class="fa-brands fa-html5 text-orange-400 mr-2"></i>
+                        HTML5
+                    </span>
+                    <span class="text-sky-400">85%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width:85%"></div>
+                </div>
+
+            </div>
+
+            <!-- CSS -->
+            <div class="card bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+
+                <div class="flex justify-between mb-4">
+                    <span>
+                        <i class="fa-brands fa-css3-alt text-blue-400 mr-2"></i>
+                        CSS3
+                    </span>
+                    <span class="text-sky-400">80%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width:80%"></div>
+                </div>
+
+            </div>
+
+            <!-- JAVASCRIPT -->
+            <div class="card bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+
+                <div class="flex justify-between mb-4">
+                    <span>
+                        <i class="fa-brands fa-js text-yellow-400 mr-2"></i>
+                        JavaScript
+                    </span>
+                    <span class="text-sky-400">60%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width:60%"></div>
+                </div>
+
+            </div>
+
+            <!-- UI DESIGN -->
+            <div class="card bg-slate-900 border border-slate-800 p-6 rounded-2xl">
+
+                <div class="flex justify-between mb-4">
+                    <span>
+                        <i class="fa-solid fa-pen-ruler text-purple-400 mr-2"></i>
+                        UI Design
+                    </span>
+                    <span class="text-sky-400">70%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width:70%"></div>
+                </div>
+
+            </div>
+
+            <!-- PROMPT ENGINEERING -->
+            <div class="card bg-slate-900 border border-slate-800 p-6 rounded-2xl md:col-span-2">
+
+                <div class="flex justify-between mb-4">
+                    <span>
+                        <i class="fa-solid fa-robot text-emerald-400 mr-2"></i>
+                        Prompt Engineering
+                    </span>
+                    <span class="text-sky-400">65%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-fill" style="width:65%"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-24 px-6 bg-slate-900">
+
+    <div class="max-w-6xl mx-auto">
+
+        <div class="text-center mb-14">
+
+            <p class="text-sky-400 uppercase tracking-widest text-sm">
+                Hasil Latihan
+            </p>
+
+            <h2 class="text-4xl font-bold mt-3">
+                My <span class="neon">Projects</span>
+            </h2>
+
+            <p class="text-slate-400 mt-4">
+                Beberapa project yang saya buat selama belajar.
+            </p>
+
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- PROJECT 1 -->
+            <div class="card bg-slate-800 border border-slate-700 rounded-2xl overflow-hidden">
+
+                <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+                alt="Website Profil Pribadi"
+                class="w-full h-48 object-cover">
+
+                <div class="p-6">
+
+                    <h3 class="text-xl font-bold">
+                        Website Profil Pribadi
+                    </h3>
+
+                    <p class="text-slate-400 text-sm mt-4 leading-relaxed">
+                        Website profil pribadi menggunakan HTML
+                        dan Tailwind CSS.
+                    </p>
+
+                    <div class="flex gap-2 flex-wrap mt-4">
+
+                        <span class="bg-sky-500/10 text-sky-400 px-3 py-1 rounded-full text-xs">
+                            HTML
+                        </span>
+
+                        <span class="bg-sky-500/10 text-sky-400 px-3 py-1 rounded-full text-xs">
+                            Tailwind CSS
+                        </span>
+
+                    </div>
+
+                    <a href="#contact"
+                    class="inline-block mt-6 text-sky-400 hover:text-white transition">
+                        Lihat Demo
+                        <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- PROJECT 2 -->
+            <div class="card bg-slate-800 border border-slate-700 rounded-2xl overflow-hidden">
+
+                <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
+                alt="Kalkulator Web Sederhana"
+                class="w-full h-48 object-cover">
+
+                <div class="p-6">
+
+                    <h3 class="text-xl font-bold">
+                        Kalkulator Web Sederhana
+                    </h3>
+
+                    <p class="text-slate-400 text-sm mt-4 leading-relaxed">
+                        Latihan logika aritmatika dasar
+                        menggunakan JavaScript.
+                    </p>
+
+                    <div class="flex gap-2 flex-wrap mt-4">
+
+                        <span class="bg-sky-500/10 text-sky-400 px-3 py-1 rounded-full text-xs">
+                            HTML
+                        </span>
+
+                        <span class="bg-sky-500/10 text-sky-400 px-3 py-1 rounded-full text-xs">
+                            CSS
+                        </span>
+
+                        <span class="bg-sky-500/10 text-sky-400 px-3 py-1 rounded-full text-xs">
+                            JavaScript
+                        </span>
+
+                    </div>
+
+                    <a href="#contact"
+                    class="inline-block mt-6 text-sky-400 hover:text-white transition">
+                        Lihat Demo
+                        <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- PROJECT 3 -->
+            <div class="card bg-slate-800 border border-slate-700 rounded-2xl overflow-hidden">
+
+                <img
+                src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=800&q=80"
+                alt="Desain UI Aplikasi Sekolah"
+                class="w-full h-48 object-cover">
+
+                <div class="p-6">
+
+                    <h3 class="text-xl font-bold">
+                        Desain UI Aplikasi Sekolah
+                    </h3>
+
+                    <p class="text-slate-400 text-sm mt-4 leading-relaxed">
+                        Rancangan antarmuka pengguna modern
+                        untuk aplikasi sekolah.
+                    </p>
+
+                    <div class="flex gap-2 flex-wrap mt-4">
+
+                        <span class="bg-sky-500/10 text-sky-400 px-3 py-1 rounded-full text-xs">
+                            UI Design
+                        </span>
+
+                        <span class="bg-sky-500/10 text-sky-400 px-3 py-1 rounded-full text-xs">
+                            Design
+                        </span>
+
+                    </div>
+
+                    <a href="#contact"
+                    class="inline-block mt-6 text-sky-400 hover:text-white transition">
+                        Lihat Demo
+                        <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24 px-6">
+
+    <div class="max-w-4xl mx-auto text-center">
+
+        <p class="text-sky-400 uppercase tracking-widest text-sm">
+            Hubungi Saya
+        </p>
+
+        <h2 class="text-4xl font-bold mt-3">
+            Let's <span class="neon">Connect</span>
+        </h2>
+
+        <p class="text-slate-400 mt-6 leading-relaxed">
+            Terima kasih telah mengunjungi portofolio saya.
+            Silakan hubungi saya melalui sosial media atau email.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-12">
+
+            <!-- INSTAGRAM -->
+            <a href="https://www.instagram.com/sherlina5551"
+            target="_blank"
+            class="card bg-slate-900 border border-slate-800 p-8 rounded-2xl">
+
+                <i class="fa-brands fa-instagram text-pink-400 text-4xl"></i>
+
+                <h3 class="font-bold mt-4">
+                    Instagram
+                </h3>
+
+                <p class="text-slate-400 mt-2">
+                    @sherlina5551
+                </p>
+
+            </a>
+
+            <!-- GITHUB -->
+            <a href="https://github.com/Sherlina12"
+            target="_blank"
+            class="card bg-slate-900 border border-slate-800 p-8 rounded-2xl">
+
+                <i class="fa-brands fa-github text-white text-4xl"></i>
+
+                <h3 class="font-bold mt-4">
+                    GitHub
+                </h3>
+
+                <p class="text-slate-400 mt-2">
+                    Sherlina12
+                </p>
+
+            </a>
+
+            <!-- EMAIL -->
+            <a href="mailto:sherlina55r@gmail.com"
+            class="card bg-slate-900 border border-slate-800 p-8 rounded-2xl">
+
+                <i class="fa-solid fa-envelope text-sky-400 text-4xl"></i>
+
+                <h3 class="font-bold mt-4">
+                    Email
+                </h3>
+
+                <p class="text-slate-400 mt-2">
+                    sherlina55r@gmail.com
+                </p>
+
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-slate-800 py-8 text-center">
+
+    <p class="text-slate-400 text-sm">
+        &copy; 2026 Sherlina Yuliarefa.
+        Dibuat dengan HTML, CSS & JavaScript.
+    </p>
+
+    <p class="text-slate-500 text-xs mt-3">
+        X RPL - SMK Ma'arif Batu
+    </p>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+
+    // Typing Effect
+    const roles = [
+        "Game Developer",
+        "Web Developer",
+        "UI Designer",
+        "Pelajar RPL"
+    ];
+
+    const typingElement = document.getElementById("typing");
+
+    let roleIndex = 0;
+    let charIndex = 0;
+    let deleting = false;
+
+    function typingEffect() {
+
+        const currentRole = roles[roleIndex];
+
+        if (!deleting) {
+
+            typingElement.textContent =
+                currentRole.substring(0, charIndex + 1);
+
+            charIndex++;
+
+            if (charIndex === currentRole.length) {
+                deleting = true;
+                setTimeout(typingEffect, 1500);
+                return;
+            }
+
+        } else {
+
+            typingElement.textContent =
+                currentRole.substring(0, charIndex - 1);
+
+            charIndex--;
+
+            if (charIndex === 0) {
+                deleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+            }
+
+        }
+
+        setTimeout(typingEffect, deleting ? 60 : 100);
+    }
+
+    typingEffect();
+
+</script>
+
+</body>
+</html>
